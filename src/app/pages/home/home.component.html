@@ -10,12 +10,18 @@
       <th scope="col">Id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Especie</th>
+      <th scope="col">Acciones</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let per of personajes">{{per.id}}
       <th scope="row">{{per.name}}</th>
       <td>{{per.species}}</td>
+      <td>
+        <mat-dialog-actions>
+          <button mat-button mat-raised-button color="warn" (click)="deletePersonaje(per.name)">Eliminar</button>
+        </mat-dialog-actions>
+      </td>
     </tr>
     </tbody>
   </table>
