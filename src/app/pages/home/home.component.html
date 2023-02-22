@@ -1,0 +1,22 @@
+<div class="container-sm m-auto">
+  <div class="text-center mt-5">
+    <h1>Lista de personajes</h1>
+    <hr>
+  </div>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Especie</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let per of personajes">{{per.id}}
+      <th scope="row">{{per.name}}</th>
+      <td>{{per.species}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
